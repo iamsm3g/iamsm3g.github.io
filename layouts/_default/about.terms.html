@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $days := 0 }}
+{{ $posts := (where .Site.RegularPages "Section" "==" "post") }}
+{{ if ne (len $posts) 0 }}
+{{ $post := index (last 1 $posts) 0 }}
+{{ $duration := sub (time now).Unix (time $post.PublishDate).Unix }}
+{{ $days := div $duration 86400 }}
+{{ end }}
+<main id="main">
+  <h1>{{ .Title }}</h1>
+  <div>
+    <dl class="about-content">
+      <dt>プロフィール</dt>
+      <dd><a href='https://github.com/iamsm3g/'>iamsm3g</a></dd>
+      <dt>ブログ投稿数</dt>
+      <dd>{{ len (where .Site.RegularPages "Section" "==" "post") }} 記事</dd>
+      <dt>タグ数</dt>
+      <dd>{{ len .Site.Taxonomies.tags }}</dd>
+      <dt>ブログ投稿日数</dt>
+      <dd>{{ $days }} 日</dd>
+    </dl>
+  </div>
+</main>
+{{ end }}

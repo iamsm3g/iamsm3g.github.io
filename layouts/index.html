@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $pinned := where .Site.RegularPages "Params.pin" "==" true }}
+{{ $section := $pinned }}
+{{ $section_title := "Pinned posts" }}
+<main id="main">
+  <h1>{{ .Title }}</h1>
+  {{ if ne (len $pinned) 0 }}
+  {{ else }}
+  {{ $section = where .Site.RegularPages "Section" "==" "post" }}
+  {{ $section_title = "Popular posts" }}
+  {{ end }}
+  {{ if ne (len $section) 0 }}
+  <ul class="patterns-list" id="list">
+    {{ range (first 6 $section) }}
+    <li>
+      <h2>
+        <a href="{{ .RelPermalink }}">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use href="#bookmark"></use>
+          </svg>
+          {{ .Title }}
+        </a>
+      </h2>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p>No post</p>
+  {{ end }}
+</main>
+{{ end }}

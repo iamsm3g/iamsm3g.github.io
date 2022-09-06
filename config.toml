@@ -1,0 +1,90 @@
+baseURL = 'https://iamsm3g.github.io/'
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+hasCJKLanguage = true
+title = 'Good morning'
+theme = 'cupper-hugo-theme'
+googleAnalytics = ''
+disqusShortname = 'yourdiscussshortname'
+enableGitInfo = true
+
+[taxonomies]
+  tag = 'tags'
+  about = 'about'
+
+[permalinks]
+  post = '/:filename/'
+
+[imaging]
+  quality = 99
+
+[params]
+  description = '朝早く起きた時だけ更新するブログ'
+  footer = 'Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [GitHub Pages](https://github.com/iamsm3g/iamsm3g.github.io/tree/gh-pages).'
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = 'Jan 2, 2006'
+  codePenUser = 'someUser'
+  katex = true
+  hideHeaderLinks = false
+  search = true
+  showThemeSwitcher = true
+  defaultDarkTheme = false
+  moveFooterToHeader = false
+  # navTitleText = 'Cupper Theme'
+  logoAlt = 'An alternative text description of the logo'
+  customCss = ['css/custom_01.css', 'css/custom_02.css', 'css/about.css']
+  customJs = ['js/custom_01.js', 'js/custom_02.js']
+
+[menu]
+[[menu.nav]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+[[menu.nav]]
+  name = 'Blog'
+  url = '/post/'
+  weight = 2
+[[menu.nav]]
+  name = 'Tags'
+  url = '/tags/'
+  weight = 3
+[[menu.nav]]
+  name = 'About'
+  url = '/about/'
+  weight = 4
+[[menu.nav]]
+  name = 'RSS'
+  url = '/index.xml'
+  weight = 5
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+[markup.goldmark]
+  [markup.goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+  [markup.goldmark.parser]
+    attribute = true
+    autoHeadingID = true
+  [markup.goldmark.renderer]
+    hardWraps = false
+    unsafe = true
+    xHTML = false
+[markup.highlight]
+  codeFences = false
+  hl_Lines = ''
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = 'github'
+  tabWidth = 4
+
+[markup.tableOfContents]
+  endLevel = 6
+  startLevel = 2

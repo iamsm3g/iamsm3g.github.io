@@ -1,0 +1,8 @@
+dl.about-content dt {
+    border-bottom: solid 1px;
+}
+
+dl.about-content dd {
+    margin-left: -40px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <main id="main">
+    <h1>{{ .Title }}</h1>
+    Post: {{ .PublishDate.Format $dateFormat }}
+    / Up: {{ .Lastmod.Format "2006-01-02" }}
+    {{ .Content }}
+  </main>
+{{ end }}
