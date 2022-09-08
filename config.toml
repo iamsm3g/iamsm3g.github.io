@@ -57,6 +57,9 @@ enableGitInfo = true
   url = '/index.xml'
   weight = 5
 
+[minify]
+  disableHTML = true
+
 [markup]
   defaultMarkdownHandler = 'goldmark'
 [markup.goldmark]
