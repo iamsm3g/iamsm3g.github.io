@@ -4,4 +4,4 @@
 {{ $numbered := .Get "numbered" }}
 {{ $filename := .Get "filename" }}
 {{ with $filename }}<div class="code-filename">{{ . }}</div>{{ end }}
-<div class="code-annotated {{ if and ($numbered) (ne $numbered "false") }}numbered{{ end }}" file-name="{{ $filename }}"><code>{{ $code | safeHTML }}</code></div>
+<div class="code-annotated {{ if and ($numbered) (ne $numbered "false") }}numbered{{ end }}"><code>{{ $code | safeHTML }}</code></div>
