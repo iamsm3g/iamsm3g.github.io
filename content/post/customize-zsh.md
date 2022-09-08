@@ -6,7 +6,7 @@ pin: false
 tags: ["zsh"]
 ---
 
-{{< code filename=".zprofile" >}}
+{{< code >}}
 typeset -Ug path
 path+=(~/bin(N-/) ~/.local/bin(N-/))
 
