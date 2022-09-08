@@ -32,8 +32,8 @@ enableGitInfo = true
   moveFooterToHeader = false
   # navTitleText = 'Cupper Theme'
   logoAlt = 'An alternative text description of the logo'
-  customCss = ['css/custom_01.css', 'css/custom_02.css', 'css/about.css', 'css/code.css']
-  customJs = ['js/custom_01.js', 'js/custom_02.js']
+  customCss = ['css/about.css']
+  #customJs = ['js/custom_01.js', 'js/custom_02.js']
 
 [menu]
 [[menu.nav]]
