@@ -6,4 +6,15 @@ pin: false
 tags: ["zsh"]
 ---
 
-{{< gist iamsm3g ca5dc7f89bbd2175670eed2c4ca7d755 >}}
+{{< code filename=".zprofile" >}}
+typeset -Ug path
+path+=(~/bin(N-/) ~/.local/bin(N-/))
+
+typeset -Ug cdpath
+cdpath+=(~ ~/git(N-/) ~/src(N-/))
+
+if (( $+commands[tmux] && $+SSH_CONNECTION && ! $+TMUX )); then
+    tmux has && exec tmux attach
+    exec tmux new
+fi
+{{< /code >}}
